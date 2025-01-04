@@ -1,0 +1,5 @@
+sk a : 2
+
+a +: 5
+
+program(a)
