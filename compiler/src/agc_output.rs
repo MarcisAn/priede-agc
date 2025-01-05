@@ -5,11 +5,11 @@ fn format_bytecode_line(optcode: OPTCODE, counter: usize) -> String {
         OPTCODE::Display { display, register } =>
             format!("	CA PR{}\n	TC {}", register, match display {
                 crate::DisplayOptions::Prog => "DSPPROG",
-                crate::DisplayOptions::Verb => todo!(),
-                crate::DisplayOptions::Noun => todo!(),
-                crate::DisplayOptions::R1 => todo!(),
-                crate::DisplayOptions::R2 => todo!(),
-                crate::DisplayOptions::R3 => todo!(),
+                crate::DisplayOptions::Verb => "DSPVERB",
+                crate::DisplayOptions::Noun => "DSPNOUN",
+                crate::DisplayOptions::R1 => "DSPR1",
+                crate::DisplayOptions::R2 => "DSPR2",
+                crate::DisplayOptions::R3 => "DSPR3",
             }),
         OPTCODE::LoadNumber { const_num, register } =>
             format!("	CA PC{}\n	TS PR{}", const_num, register),

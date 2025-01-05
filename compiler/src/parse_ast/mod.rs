@@ -66,6 +66,7 @@ pub fn parse_ast(node: AstNode, compiler: &mut Compiler, block: &mut Vec<OPTCODE
         "var_def" => var_def(compiler, node, block),
         "ID" => id(compiler, node, block),
         "id_assign" => id_assign(compiler, node, block),
+        "w_loop" => w_loop(compiler, node, block),
         "block" => (),
         _ => panic!("Unrecognized symbol: {}", title),
     }

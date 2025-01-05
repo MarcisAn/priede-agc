@@ -1,5 +1,15 @@
-sk a : 2
+sk num1 : 0
+sk num2 : 1
+sk nakamais : num2
 
-a +: 5
+sk tmp : 0
 
-program(a)
+sk i : 1
+kamēr i < 10 {
+    r1(nakamais)
+    num1 : num2
+    num2 : nakamais
+    nakamais : num1 + num2
+
+    i +: 1
+}
